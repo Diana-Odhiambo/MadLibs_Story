@@ -1,0 +1,16 @@
+tax_amount = float(input("Enter tax amount: "))
+
+if tax_amount >= 1000000:
+ waiver = 0.35 # 35% waiver
+
+elif tax_amount >= 500000:
+ waiver = 0.2 # 20% waiver
+
+else:
+ waiver = 0.1 # 10% waiver
+
+waiver_amount = tax_amount * waiver
+final_tax = tax_amount - waiver_amount
+
+print(f"The waiver amount applied is: {waiver * 100:.0f}%")
+print(f"The final tax amount after waiver is: {final_tax:.2f}")
